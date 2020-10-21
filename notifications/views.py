@@ -175,8 +175,6 @@ def live_unread_notification_list(request):
             struct['target'] = str(notification.target)
         if notification.action_object:
             struct['action_object'] = str(notification.action_object)
-        if notification.data:
-            struct['data'] = notification.data
         unread_list.append(struct)
         if request.GET.get('mark_as_read'):
             notification.mark_as_read()
@@ -222,8 +220,6 @@ def live_all_notification_list(request):
             struct['target'] = str(notification.target)
         if notification.action_object:
             struct['action_object'] = str(notification.action_object)
-        if notification.data:
-            struct['data'] = notification.data
         all_list.append(struct)
         if request.GET.get('mark_as_read'):
             notification.mark_as_read()

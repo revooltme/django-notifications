@@ -203,7 +203,6 @@ class Notification(models.Model):
     deleted = models.BooleanField(default=False, db_index=True)
     emailed = models.BooleanField(default=False, db_index=True)
 
-    data = JSONField(blank=True, null=True)
     objects = NotificationQuerySet.as_manager()
 
     class Meta:
